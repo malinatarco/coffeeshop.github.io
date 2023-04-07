@@ -1,0 +1,628 @@
+@import url('https://fonts.googleapis.com/css?family=Mulish&display=swap');
+
+*{
+    box-sizing:border-box;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none;
+}
+
+body{
+    font-family:'Mulish';
+    margin:0;
+    position:relative;
+    overflow-x:hidden;
+    color: #353839;
+}
+
+.hero-img{
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position:center center;
+    width:100%;
+    height:500px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    position:relative;
+}
+.hero-img::before{
+    content:'';
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    background-color:rgba(0, 0, 0, 0.5);
+}
+
+#hero-img{
+    background-color: #ffff00;
+    height:300px;
+    border-radius: 0 0 50px 50px;
+}
+
+#hero-img::before{
+    background-color:rgba(0, 0, 0, 0);
+}
+
+#hero-h2{
+    color:black;
+}
+
+.hero-img .container{
+    height: 50px;
+    z-index:100;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-img h2{
+    color: white;
+    z-index:100;
+    font-size:30px;
+}
+.hero-img p{
+    color: white;
+    font-size: 20px;
+    z-index:100;
+}
+
+.hero-img .myBtn{
+    background-color: #ffff00;
+    border: none;
+    padding: 10px 18px;
+    font-size: 14px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s linear;
+    text-decoration:none;
+    color: black;
+}
+
+.hero-img .myBtn:hover{
+    background-color: #f5c71a;
+}
+
+.hero-img .myBtn:active{
+    transform:scale(0.98);
+}
+
+.navigation{
+    width:100%;
+    height:50px;
+    background-color: transparent;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    margin-top:0;
+    position: absolute;
+    top:0;
+    left:0;
+}
+.navigation a{
+    text-decoration:none;
+    color: white;
+    display:inline-block;
+    margin:0 25px;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+    text-transform: uppercase;
+
+}
+
+.navigation a:first-child{
+    position:absolute;
+    left:20px;
+}
+
+.navigation a:hover{
+    color: #ffebcd;
+}
+
+.nav-pages a{
+    color:black;
+}
+
+.nav-pages a:hover{
+    color: #696969;
+}
+
+nav{
+    display:none;
+}
+
+/* Pentru continutul About  */
+
+.content-about{
+    margin:50px auto 20px auto;
+    max-width: 1000px;
+}
+.first-section{
+    max-width:800px;
+    margin:auto;
+}
+.content-about p{
+    font-size:18px;
+}
+.content-about p span{
+    float: left;
+    width: 0.7em;
+    font-size:400%;
+    line-height:70%;
+    background-color: #ffff00;
+    padding: 15px;
+    margin-right: 8px;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.content-about h2{
+    text-align:center;
+    margin: 0 0 40px 0;
+}
+
+.split-section{
+    display:flex;
+    height:370px;
+}
+.left-section{
+    width:250px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.left-section img{
+    width:50px;
+    height:75px;
+    transition: all 1s linear;
+}
+
+.left-section img.wide-img{
+    width:100%;
+    height:100%;
+}
+
+.right-section{
+    margin-left:50px;
+    margin-top:0;
+    padding-top:0;
+    width: 750px;
+}
+
+.right-section p:first-child{
+    margin-top:0;
+    padding-top:0;
+}
+
+@media (max-width:800px){
+    .content-about{
+        margin: 50px 50px 50px 50px;
+        height:1200px;
+    }
+
+    .split-section{
+        flex-direction:column;
+    }
+    .left-section, .right-section{
+        width:100%;
+    }
+
+    .left-section img{
+        width:300px;
+        height:450px;
+    }
+
+    .left-section img.wide-img{
+        width:300px;
+        height:450px;
+    }
+
+    .right-section{
+        /*height:1000px;*/
+        margin-bottom:50px;
+        margin-left:0;
+        margin-top:50px;
+        text-align:justify;
+    }
+}
+
+
+/*Pentru galerie */
+
+.slider-outside{
+    height:100vh;
+    width:100vw;
+    margin-top:100px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+}
+
+.slider-outside::before{
+    content:'';
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background-color: rgba(0, 0, 0, 0.8);
+}  
+
+.slider-outside h2{
+    position:absolute;
+    top:8px;
+    left:50%;
+    color: white;
+    transform: translateX(-50%);
+    text-align:center;
+}
+
+
+
+.slider-container{
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.23);
+    height: 70vh;
+    width: 70vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide{
+    opacity: 0;
+    height:100%;
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
+    position:absolute;
+    transition: 0.4s ease;
+    z-index:1; 
+ }
+
+ .slide.active{
+    opacity:1;
+ }
+
+ .arrow{
+    position:absolute;
+    background-color: transparent;
+    color: white;
+    padding: 20px;
+    font-size: 25px;
+    border:2px solid #ffff00;
+    top:50%;
+    transform:translateY(-50%);
+    cursor:pointer;
+    z-index:1;
+}
+
+.arrow:focus{
+    outline:none;
+}
+
+.left-arrow{
+ left:0vw;
+}
+
+.right-arrow{
+    right:0vw;
+}
+
+/*Pentru Testimoniale */
+
+.clients-testimonials{
+    margin-top:120px;
+}
+
+.clients-testimonials h2{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.testimonial-container{
+    background-color: #ffff00;
+    border-radius: 20px;
+    margin:20px auto;
+    padding: 50px 80px;
+    max-width: 800px;
+    position:relative;
+}
+
+.fa-quote{
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 28px;
+    position:absolute;
+    top:70px;
+}
+
+.fa-quote-right {
+    left:40px;
+}
+
+.fa-quote-left{
+    right: 40px;
+}
+
+.testimonial{
+    line-height:28px;
+    text-align:justify;
+}
+
+.user{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user .username{
+    margin:0;
+}
+
+.progress-bar{
+    background-color: white;
+    height:4px;
+    width:100%;
+    animation: grow 10s linear infinite;
+    transform-origin:left;
+}
+
+@keyframes grow{
+    0% {
+        transform: scaleX(0);
+    }
+}
+
+@media (max-width:600px){
+    .testimonial-container{
+        padding: 20px 30px;
+    }
+
+    .fa-quote{
+        display: none;
+    }
+}
+
+/*Pentru Cards Section */
+
+.card-section{
+    margin:50px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+}
+
+.card-row{
+    width:100%;
+    display:flex;
+}
+
+.card{
+    width:48%;
+    margin: 15px 10px;
+    height: 500px;
+    transition: 0.3s linear;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    position: relative;
+    text-align:justify;
+}
+
+
+
+.card.white-card{
+    border: 1px solid #dcdcdc;
+}
+
+.card.white-card:hover{
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+.card.black-card p{
+    color:white;
+    z-index:1;
+}
+.card.black-card h3{
+    color:white;
+    z-index:1;
+}
+
+.card.black-card::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}  
+
+
+
+.card.black-card img{
+    position: absolute;
+    width:100%;
+    height:100%;
+    z-index: -1;
+}
+
+.fa-heart{
+    font-size: 30px;
+    color: #ff0000;
+    z-index:1;
+}
+
+@media (max-width:800px) {
+    .card-row{
+        flex-direction: column;
+    }
+
+    .card{
+        width:95%;
+        height:550px;
+    }
+
+}
+
+
+@media (max-width:600px){
+    .navigation{
+        display:none;
+    }
+    nav{
+        display:block;
+        background-color: white;
+        padding:20px;
+        width:80px;
+        display:flex;
+        align-items:center;
+        justify-content: center;
+        border-radius:5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        transition: width 0.6s linear;
+        margin-left:20px;
+        position:absolute;
+        top:10px;
+        right:10px;
+    }
+
+    nav.active{
+        width:280px;
+    }
+
+    nav ul{
+        display:flex;
+        list-style-type: none;
+        padding: 0;
+        margin:0;
+        width:0;
+        transition: width 0.6s linear;
+    }
+
+    nav.active ul{
+        width:100%;
+    }
+
+    nav ul li{
+        transform: rotateY(0deg);
+        opacity:0;
+        transition: transform 0.6s linear, opacity 0.6s linear;
+
+    }
+    nav.active ul li{
+        opacity:1;
+        transform: rotateY(360deg);
+    }
+
+    nav ul a{
+        position:relative;
+        color: black;
+        text-decoration:none;
+        margin:0 10px;
+        font-size:18px;
+    }
+
+    .icon{
+        background-color: white;
+        border:0;
+        cursor:pointer;
+        padding:0;
+        position:relative;
+        height:30px;
+        width:30px;
+    }  
+    
+    .icon .line{
+        background-color: #5290f9;
+        height:2px;
+        width:20px;
+        position: absolute;
+        top:10px;
+        left:5px;
+        transition: transform 0.6s linear;
+    } 
+
+    .icon .line2{
+        top:auto;
+        bottom:10px;
+    } 
+    nav.active .icon .line1{
+        transform: rotate(-765deg) translateY(5.5px);
+    } 
+
+    nav.active .icon .line2{
+        transform: rotate(765deg) translateY(-5.5px);
+    }
+}
+
+/*Pentru pagina de contact*/
+
+.contact{
+    display:flex;
+    flex-wrap:wrap;
+    margin:100px auto;
+    max-width:1050px;
+}
+
+.contact-container{
+    width:500px;
+    height:400px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+    margin: 10px 10px;
+    border:1px solid #ccc;
+    background-color: #fff44f;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction:column;
+}
+
+form{
+    margin:20px 30px;
+}
+
+input[type=text], input[type=email], textarea, input[type=submit]{
+    width:100%;
+    height:50px;
+    margin-bottom:10px;
+    border:none;
+    border-radius: 10px;
+    text-align:center;
+    font-family:inherit;
+    font-size:17px;
+}
+
+input[type=text]:focus, input[type=email]:focus, textarea:focus{
+    outline:none;
+}
+
+input[type=submit]{
+    background-color: #ff4500;
+    cursor: pointer;
+}
+
+.fa-envelope{
+    font-size:30px;
+    color: white;
+}
+
+@media (max-width:800px){
+    .contact-container{
+        max-width:400px;
+        margin:10 auto;
+    }
+}
